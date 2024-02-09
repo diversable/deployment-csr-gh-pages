@@ -3,7 +3,7 @@ use leptos::*;
 
 /// Default Home Page
 #[component]
-pub fn Home() -> impl IntoView {
+pub fn Test() -> impl IntoView {
     view! {
         <div class="container">
 
@@ -12,14 +12,12 @@ pub fn Home() -> impl IntoView {
                 <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo" height="200" width="400"/>
             </picture>
 
-            <h1>"Welcome to Leptos"</h1>
+            <h1>"Welcome to a test page"</h1>
 
             <div class="buttons">
                 <Button />
                 <Button increment=5 />
             </div>
-
-            <A href="/test">Go to test page</A>
 
         </div>
     }

@@ -9,6 +9,7 @@ mod pages;
 // Top-Level pages
 use crate::pages::home::Home;
 use crate::pages::not_found::NotFound;
+use crate::pages::test::Test;
 
 /// An app router which renders the homepage and handles 404's
 #[component]
@@ -48,9 +49,10 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <Router base="https://diversable.github.io/deployment-gh-pages-csr">
+            <Router base="https://diversable.github.io/deployment-gh-pages-csr/">
                 <Routes>
                     <Route path="/" view=Home />
+                    <Route path="/test" view=Test />
                     <Route path="/*" view=NotFound />
                 </Routes>
             </Router>
