@@ -54,9 +54,9 @@ pub fn App() -> impl IntoView {
             <Router base=base_path>
 
                 <Routes>
-                    <Route path="/test" view=Test />
-                    <Route path="/*" view=Home />
-                    // <Route path="/*" view=NotFound />
+                    <Route path="/deployment-gh-pages-csr/" view=Home />
+                    <Route path="/deployment-gh-pages-csr/test" view=Test />
+                    <Route path="/*" view=NotFound />
                 </Routes>
             </Router>
 

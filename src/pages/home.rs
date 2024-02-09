@@ -20,7 +20,7 @@ pub fn Home() -> impl IntoView {
                 <Button increment=5 />
             </div>
 
-            <A href="/deployment-gh-pages-csr/test">Go to test page</A>
+            <A href="/test">Go to test page</A>
 
         </div>
     }
