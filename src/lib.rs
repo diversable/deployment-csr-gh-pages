@@ -17,6 +17,8 @@ pub fn App() -> impl IntoView {
     // Provides context that manages stylesheets, titles, meta tags, etc.
     provide_meta_context();
 
+    let base_path = "https://diversable.github.io/deployment-gh-pages-csr/";
+
     view! {
 
         // injects info into HTML tag from application code
@@ -49,8 +51,8 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <Router base="https://diversable.github.io/deployment-gh-pages-csr/">
-            // <Router base="">
+            <Router base=move || base_path>
+
                 <Routes>
                     <Route path="/test" view=Test />
                     <Route path="/*" view=Home />
