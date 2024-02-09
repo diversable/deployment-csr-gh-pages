@@ -51,7 +51,7 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <Router base=move || base_path>
+            <Router base=(move || base_path)()>
 
                 <Routes>
                     <Route path="/test" view=Test />
