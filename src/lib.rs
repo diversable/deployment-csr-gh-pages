@@ -48,9 +48,9 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <Router base="https://diversable.github.io/">
+            <Router base="https://diversable.github.io/deployment-gh-pages-csr/">
                 <Routes>
-                    <Route path="/" view=Home />
+                    <Route path="" view=Home />
                     <Route path="/*" view=NotFound />
                 </Routes>
             </Router>
