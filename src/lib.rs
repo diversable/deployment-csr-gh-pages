@@ -28,9 +28,6 @@ pub fn App() -> impl IntoView {
 
     // let something = nav_ref.get().unwrap();
 
-    // let curr_location = document().get_element_by_id("test").unwrap();
-    // let location = curr_location.base_uri().unwrap().unwrap();
-
     view! {
 
         // injects info into HTML tag from application code
@@ -47,7 +44,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        // <base href=base_path.clone() />
+        <base href="https://diversable.github.io/deployment-gh-pages-csr/" />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -65,17 +62,8 @@ pub fn App() -> impl IntoView {
             }
         >
 
-        // <nav _ref=nav_ref>
-        <nav>
-            <A id="test" href="/test">Go to test page</A>
-            // <p>"Location: " {location}</p>
-        </nav>
-
-
-
             <Router>
                 <Routes base="/deployment-gh-pages-csr".to_string()>
-                // <Routes>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
                     // fallback
