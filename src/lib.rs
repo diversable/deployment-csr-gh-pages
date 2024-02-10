@@ -20,7 +20,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     // let base_path = "https://diversable.github.io/deployment-gh-pages-csr/".to_string();
-    let base_path = "/deployment-gh-pages-csr".to_string();
+    // let base_path = "/deployment-gh-pages-csr".to_string();
 
     // let location = document()
     //     .location()
@@ -70,15 +70,15 @@ pub fn App() -> impl IntoView {
         >
 
         // <nav _ref=nav_ref>
-        <nav>
-            <A id="test" href="/test">Go to test page</A>
-            // <p>"Location: " {location}</p>
-        </nav>
+        // <nav>
+        //     <A id="test" href="/test">Go to test page</A>
+        //     // <p>"Location: " {location}</p>
+        // </nav>
 
 
 
             <Router>
-                <Routes base=base_path.clone()>
+                <Routes base="/deployment-gh-pages-csr".to_string()>
                 // <Routes>
                     <Route path="/" view=Home />
                     // <Route path="/deployment-gh-pages-csr/" view=Home />
