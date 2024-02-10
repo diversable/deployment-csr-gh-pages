@@ -68,18 +68,18 @@ pub fn App() -> impl IntoView {
             }
         >
 
-        // <nav _ref=nav_ref>
-        //     <A id="test" href="/test">Go to test page</A>
-        //     "location: "{location}
-        // </nav>
+        <nav _ref=nav_ref>
+            <A id="test" href="/test">Go to test page</A>
+            // "location: "{location}
+        </nav>
 
             // <p>"Location: " {location}</p>
 
             <Router>
                 <Routes base=base_path.clone()>
                 // <Routes>
-                    <Route path="/" view=Home />
-                    // <Route path="/deployment-gh-pages-csr/" view=Home />
+                    // <Route path="/" view=Home />
+                    <Route path="/deployment-gh-pages-csr/" view=Home />
                     <Route path="/test" view=Test />
                     // <Route path="/deployment-gh-pages-csr/test" view=Test />
                     <Route path="/*" view=NotFound />
