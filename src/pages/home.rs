@@ -5,8 +5,6 @@ use leptos_router::A;
 /// Default Home Page
 #[component]
 pub fn Home() -> impl IntoView {
-    let location = document().location().expect("Couldn't get location..");
-
     view! {
         <div class="container">
 
@@ -23,8 +21,6 @@ pub fn Home() -> impl IntoView {
             </div>
 
             <A href="/deployment-gh-pages-csr/test">Go to test page</A>
-
-            <p>"Location: " {location}</p>
 
         </div>
     }

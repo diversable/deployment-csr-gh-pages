@@ -1,4 +1,3 @@
-use leptos::html::Base;
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
@@ -20,6 +19,8 @@ pub fn App() -> impl IntoView {
 
     let base_path = "https://diversable.github.io/deployment-gh-pages-csr/";
 
+    let location = document().location().expect("Couldn't get location..");
+
     view! {
 
         // injects info into HTML tag from application code
@@ -36,7 +37,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <Base href=base_path />
+        <base href=base_path />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -53,6 +54,8 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
+
+            <p>"Location: " {location}</p>
 
             // <Router base=base_path>
             <Router>
