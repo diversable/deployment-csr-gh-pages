@@ -1,3 +1,4 @@
+use leptos::html::Base;
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
@@ -35,7 +36,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <base href=base_path />
+        <Base href=base_path />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -53,8 +54,8 @@ pub fn App() -> impl IntoView {
             }
         >
 
-            <Router base=base_path>
-            // <Router>
+            // <Router base=base_path>
+            <Router>
 
                 <Routes>
                     <Route path="/deployment-gh-pages-csr/" view=Home />
