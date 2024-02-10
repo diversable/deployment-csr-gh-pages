@@ -51,7 +51,7 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <base href=base_path>
+            <base href=base_path />
             // <Router base=base_path>
             <Router>
 
@@ -61,7 +61,6 @@ pub fn App() -> impl IntoView {
                     <Route path="/*" view=NotFound />
                 </Routes>
             </Router>
-            </base>
 
         </ErrorBoundary>
     }
