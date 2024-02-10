@@ -19,7 +19,11 @@ pub fn App() -> impl IntoView {
 
     let base_path = "https://diversable.github.io/deployment-gh-pages-csr/";
 
-    let location = document().location().expect("Couldn't get location..");
+    let location = document()
+        .location()
+        .expect("Couldn't get location..")
+        .as_string()
+        .expect("something went wrong with location");
 
     view! {
 
@@ -57,12 +61,12 @@ pub fn App() -> impl IntoView {
 
             <p>"Location: " {location}</p>
 
-            // <Router base=base_path>
             <Router>
-
-                <Routes>
-                    <Route path="/deployment-gh-pages-csr/" view=Home />
-                    <Route path="/deployment-gh-pages-csr/test" view=Test />
+                <Routes base=base_path>
+                    <Route path="/" view=Home />
+                    // <Route path="/deployment-gh-pages-csr/" view=Home />
+                    <Route path="/test" view=Test />
+                    // <Route path="/deployment-gh-pages-csr/test" view=Test />
                     <Route path="/*" view=NotFound />
                 </Routes>
             </Router>
