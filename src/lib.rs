@@ -59,7 +59,7 @@ pub fn App() -> impl IntoView {
             }
         >
 
-            <p>"Location: " {location}</p>
+            // <p>"Location: " {location}</p>
 
             <Router>
                 <Routes base=base_path.clone()>
