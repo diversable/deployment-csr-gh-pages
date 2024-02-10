@@ -1,5 +1,7 @@
+use leptos::html::Nav;
 use leptos::*;
 use leptos_meta::*;
+use leptos_router::A;
 use leptos_router::*;
 
 // Modules
@@ -25,6 +27,13 @@ pub fn App() -> impl IntoView {
     //     .as_string()
     //     .expect("something went wrong with location");
 
+    // let nav_ref = create_node_ref::<Nav>();
+
+    // let something = nav_ref.get().unwrap();
+
+    // let curr_location = document().get_element_by_id("test").unwrap();
+    // let location = curr_location.base_uri().unwrap().unwrap();
+
     view! {
 
         // injects info into HTML tag from application code
@@ -41,7 +50,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <base href=base_path.clone() />
+        // <base href=base_path.clone() />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -59,10 +68,16 @@ pub fn App() -> impl IntoView {
             }
         >
 
+        // <nav _ref=nav_ref>
+        //     <A id="test" href="/test">Go to test page</A>
+        //     "location: "{location}
+        // </nav>
+
             // <p>"Location: " {location}</p>
 
             <Router>
                 <Routes base=base_path.clone()>
+                // <Routes>
                     <Route path="/" view=Home />
                     // <Route path="/deployment-gh-pages-csr/" view=Home />
                     <Route path="/test" view=Test />
