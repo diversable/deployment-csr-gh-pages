@@ -67,11 +67,11 @@ pub fn App() -> impl IntoView {
         //     <A href="/test">Go to test page</A>
         // </nav>
 
-        <p>{location}</p>
+        <p>{location.clone()}</p>
 
             <Router>
                 // <Routes base="/deployment-csr-gh-pages".to_string()>
-                <Routes base=location>
+                <Routes base=location.clone()>
                 // <Routes>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
