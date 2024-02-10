@@ -1,4 +1,3 @@
-use leptos::html::Nav;
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
@@ -24,9 +23,22 @@ pub fn App() -> impl IntoView {
         .href()
         .expect("couldn't get href");
 
-    // let nav_ref = create_node_ref::<Nav>();
+    let loc: Vec<&str> = location.rsplit('/').collect();
 
-    // let something = nav_ref.get().unwrap();
+    let loc_piece = *loc.iter().nth(3).expect("not the right one..");
+
+    //
+    // let loc = (&location).clone();
+
+    // let loccy: &'static str = (&loc).as_str();
+    // let loccy = (&loccy)
+    //     .rsplit('/')
+    //     .nth(3)
+    //     .expect("couldn't get location piece");
+    // let loc_piece = loccy;
+
+    //
+    // let loc_piece = loccy.split('/').nth(2).unwrap();
 
     view! {
 
@@ -44,7 +56,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        // <base href="https://diversable.github.io/deployment-csr-gh-pages/" />
+        <base href="https://diversable.github.io/deployment-csr-gh-pages/" />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -67,11 +79,13 @@ pub fn App() -> impl IntoView {
         //     <A href="/test">Go to test page</A>
         // </nav>
 
-        <p>{location.clone()}</p>
+        <p>{loc_piece}</p>
 
             <Router>
-                // <Routes base="/deployment-csr-gh-pages".to_string()>
-                <Routes base=location.clone()>
+                <Routes base="/deployment-csr-gh-pages".to_string()>
+
+                // <Routes base=location.clone()>
+
                 // <Routes>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
