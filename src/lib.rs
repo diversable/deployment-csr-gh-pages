@@ -23,9 +23,10 @@ pub fn App() -> impl IntoView {
         .href()
         .expect("couldn't get href");
 
-    let loc: Vec<&str> = location.rsplit('/').collect();
+    //
+    // let loc: Vec<&str> = location.rsplit('/').collect();
 
-    let loc_piece = *loc.iter().nth(3).expect("not the right one..");
+    // let loc_piece = *loc.iter().nth(3).expect("not the right one..");
 
     //
     // let loc = (&location).clone();
@@ -74,12 +75,12 @@ pub fn App() -> impl IntoView {
             }
         >
 
-        // <nav _ref=nav_ref>
         // <nav>
         //     <A href="/test">Go to test page</A>
         // </nav>
 
-        <p>{loc_piece}</p>
+        <p>{location}</p>
+        // <p>{loc_piece}</p>
 
             <Router>
                 <Routes base="/deployment-csr-gh-pages".to_string()>
