@@ -68,7 +68,8 @@ pub fn App() -> impl IntoView {
             }
         >
 
-        <nav _ref=nav_ref>
+        // <nav _ref=nav_ref>
+        <nav>
             <A id="test" href="/test">Go to test page</A>
             // "location: "{location}
         </nav>
