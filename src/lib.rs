@@ -24,9 +24,9 @@ pub fn App() -> impl IntoView {
     //     .as_string()
     //     .expect("something went wrong with location");
 
-    // let nav_ref = create_node_ref::<Nav>();
+    let nav_ref = create_node_ref::<Nav>();
 
-    // let something = nav_ref.get().unwrap();
+    let something = nav_ref.get().unwrap();
 
     view! {
 
@@ -61,6 +61,10 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
+
+        <nav _ref=nav_ref>
+            <A href="/test">Go to test page</A>
+        </nav>
 
             <Router>
                 <Routes base="/deployment-csr-gh-pages".to_string()>
