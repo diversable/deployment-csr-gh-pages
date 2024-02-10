@@ -70,10 +70,10 @@ pub fn App() -> impl IntoView {
         >
 
         // <nav _ref=nav_ref>
-        // <nav>
-        //     <A id="test" href="/test">Go to test page</A>
-        //     // <p>"Location: " {location}</p>
-        // </nav>
+        <nav>
+            <A id="test" href="/test">Go to test page</A>
+            // <p>"Location: " {location}</p>
+        </nav>
 
 
 
@@ -84,7 +84,7 @@ pub fn App() -> impl IntoView {
                     // <Route path="/deployment-gh-pages-csr/" view=Home />
                     <Route path="/test" view=Test />
                     // <Route path="/deployment-gh-pages-csr/test" view=Test />
-                    <Route path="/*" view=NotFound />
+                    <Route path="/*" view=Home />
                 </Routes>
             </Router>
 
