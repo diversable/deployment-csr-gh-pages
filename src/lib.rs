@@ -1,7 +1,6 @@
 use leptos::html::Nav;
 use leptos::*;
 use leptos_meta::*;
-use leptos_router::A;
 use leptos_router::*;
 
 // Modules
@@ -67,15 +66,16 @@ pub fn App() -> impl IntoView {
         >
 
         // <nav _ref=nav_ref>
-        // <nav>
-        //     <A id="test" href="/test">Go to test page</A>
-        //     // <p>"Location: " {location}</p>
-        // </nav>
+        <nav>
+            <A id="test" href="/test">Go to test page</A>
+            // <p>"Location: " {location}</p>
+        </nav>
 
 
 
             <Router>
                 <Routes base="/deployment-gh-pages-csr".to_string()>
+                // <Routes>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
                     // fallback
