@@ -35,6 +35,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <base href=base_path />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -51,9 +52,9 @@ pub fn App() -> impl IntoView {
                 </ul>
             }
         >
-            <base href=base_path />
-            // <Router base=base_path>
-            <Router>
+
+            <Router base=base_path>
+            // <Router>
 
                 <Routes>
                     <Route path="/" view=Home />
