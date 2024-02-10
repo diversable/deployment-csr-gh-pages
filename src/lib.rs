@@ -18,15 +18,15 @@ pub fn App() -> impl IntoView {
     // Provides context that manages stylesheets, titles, meta tags, etc.
     provide_meta_context();
 
-    // let location = document()
-    //     .location()
-    //     .expect("Couldn't get location..")
-    //     .as_string()
-    //     .expect("something went wrong with location");
+    let location = document()
+        .location()
+        .expect("Couldn't get Location..")
+        .href()
+        .expect("couldn't get href");
 
-    let nav_ref = create_node_ref::<Nav>();
+    // let nav_ref = create_node_ref::<Nav>();
 
-    let something = nav_ref.get().unwrap();
+    // let something = nav_ref.get().unwrap();
 
     view! {
 
@@ -44,7 +44,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <base href="https://diversable.github.io/deployment-csr-gh-pages/" />
+        // <base href="https://diversable.github.io/deployment-csr-gh-pages/" />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -62,12 +62,17 @@ pub fn App() -> impl IntoView {
             }
         >
 
-        <nav _ref=nav_ref>
-            <A href="/test">Go to test page</A>
-        </nav>
+        // <nav _ref=nav_ref>
+        // <nav>
+        //     <A href="/test">Go to test page</A>
+        // </nav>
+
+        <p>{location}</p>
 
             <Router>
-                <Routes base="/deployment-csr-gh-pages".to_string()>
+                // <Routes base="/deployment-csr-gh-pages".to_string()>
+                <Routes base=location>
+                // <Routes>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
                     // fallback
