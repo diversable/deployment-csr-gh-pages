@@ -50,7 +50,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <base href=base_path.clone() />
+        // <base href=base_path.clone() />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -77,8 +77,8 @@ pub fn App() -> impl IntoView {
 
 
             <Router>
-                // <Routes base=base_path.clone()>
-                <Routes>
+                <Routes base=base_path.clone()>
+                // <Routes>
                     <Route path="/" view=Home />
                     // <Route path="/deployment-gh-pages-csr/" view=Home />
                     <Route path="/test" view=Test />
