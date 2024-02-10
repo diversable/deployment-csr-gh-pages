@@ -44,7 +44,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <base href="https://diversable.github.io/deployment-gh-pages-csr/" />
+        <base href="https://diversable.github.io/deployment-csr-gh-pages/" />
 
         <ErrorBoundary
             fallback=|errors| view! {
@@ -63,7 +63,7 @@ pub fn App() -> impl IntoView {
         >
 
             <Router>
-                <Routes base="/deployment-gh-pages-csr".to_string()>
+                <Routes base="/deployment-csr-gh-pages".to_string()>
                     <Route path="/" view=Home />
                     <Route path="/test" view=Test />
                     // fallback
