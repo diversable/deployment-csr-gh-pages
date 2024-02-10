@@ -19,11 +19,11 @@ pub fn App() -> impl IntoView {
 
     let base_path = "https://diversable.github.io/deployment-gh-pages-csr/".to_string();
 
-    let location = document()
-        .location()
-        .expect("Couldn't get location..")
-        .as_string()
-        .expect("something went wrong with location");
+    // let location = document()
+    //     .location()
+    //     .expect("Couldn't get location..")
+    //     .as_string()
+    //     .expect("something went wrong with location");
 
     view! {
 
