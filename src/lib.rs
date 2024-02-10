@@ -19,7 +19,8 @@ pub fn App() -> impl IntoView {
     // Provides context that manages stylesheets, titles, meta tags, etc.
     provide_meta_context();
 
-    let base_path = "https://diversable.github.io/deployment-gh-pages-csr/".to_string();
+    // let base_path = "https://diversable.github.io/deployment-gh-pages-csr/".to_string();
+    let base_path = "/deployment-gh-pages-csr".to_string();
 
     // let location = document()
     //     .location()
